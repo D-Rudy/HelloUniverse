@@ -5,10 +5,10 @@ public class HelloUniverse {
         System.out.println("Hello Universe!");
         int nbPlanete = 0;
 
-        if (annee >= 2006) {
-            nbPlanete = 8;
-        }else{
+        if (annee < 2006) {
             nbPlanete = 9;
+        }else{
+            nbPlanete = 8;
         }
         System.out.printf(maChaine, annee, nbPlanete);
     }
