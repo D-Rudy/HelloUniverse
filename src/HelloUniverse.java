@@ -44,8 +44,8 @@ public class HelloUniverse {
 
         Planet planetX = new Planet();
 
-        System.out.println(planetX.nom + " est une planète " + planetX.matiere + " de " + planetX.diametre + " km de diamètre");
-        System.out.println(jupiter.nom + " est une planète " + jupiter.matiere + " de " + jupiter.diametre + " km de diamètre");
+        mars.rotation();
+        neptune.revolution();
     }
 }
 
