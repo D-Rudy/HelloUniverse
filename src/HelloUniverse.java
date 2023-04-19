@@ -44,8 +44,12 @@ public class HelloUniverse {
 
         Planet planetX = new Planet();
 
-        mars.rotation();
-        neptune.revolution();
+        int nbTour = mars.rotation(-684);
+        System.out.println(mars.nom + " a effectuée " + nbTour + " tours sur elle-même");
+        nbTour = neptune.revolution(-3542);
+        System.out.println(neptune.nom + " a effectuée " + nbTour + " tours complets autour de son étoile");
+        nbTour = venus.rotation(1250);
+        System.out.println(venus.nom + " a effectuée " + nbTour + " tours sur elle-même");
     }
 }
 
