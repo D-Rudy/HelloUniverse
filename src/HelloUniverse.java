@@ -36,6 +36,10 @@ public class HelloUniverse {
         uranus.nom = "Uranus";
         uranus.matiere = "gazeuse";
         uranus.diametre = 51118L;
+        uranus.atmosphere = new Atmosphere();
+        uranus.atmosphere.tauxHydrogene = 83f;
+        uranus.atmosphere.tauxMethane = 2.5f;
+        uranus.atmosphere.tauxHelium = 15f;
 
         Planet neptune = new Planet();
         neptune.nom = "Neptune";
@@ -47,6 +51,16 @@ public class HelloUniverse {
         mars.accueillirVaisseau(8);
         mars.accueillirVaisseau("fregate");
         System.out.println("Le nombre d'humains ayant déjà séjourné sur " + mars.nom + " est actuellement " + mars.totalVisiteurs);
+
+        System.out.println(uranus.nom + " est composée de :");
+        System.out.println(uranus.atmosphere.tauxHydrogene + "% d'hydrogène");
+        System.out.println(uranus.atmosphere.tauxMethane + "% de méthane");
+        System.out.println(uranus.atmosphere.tauxHelium + "% d'hélium");
+        System.out.println(uranus.atmosphere.tauxAzote + "% d'azote");
+        System.out.println(uranus.atmosphere.tauxArgon + "% d'argon");
+        System.out.println(uranus.atmosphere.tauxDioxydeCarbone + "% de dioxyde de carbone");
+        System.out.println(uranus.atmosphere.tauxSodium + "% de sodium");
+
     }
 }
 
