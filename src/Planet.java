@@ -4,9 +4,8 @@ public class Planet {
     long diametre;
     int totalVisiteurs = 0;
     Atmosphere atmosphere;
-
     Vaisseau vaisseauActuellementAccoste;
-
+    static String forme = "sphérique";
 
     int rotation(int angle) {
         return angle / 360;

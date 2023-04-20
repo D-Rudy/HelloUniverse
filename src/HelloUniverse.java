@@ -48,16 +48,8 @@ public class HelloUniverse {
 
         Planet planetX = new Planet();
 
-        Vaisseau fregate = new Vaisseau();
-        fregate.type = "fregate";
-        fregate.nombrePassagers = 9;
-        mars.accueillirVaisseau(fregate);
-        Vaisseau croiseur = new Vaisseau();
-        croiseur.type = "croiseur";
-        croiseur.nombrePassagers = 42;
-        mars.accueillirVaisseau(croiseur);
-
-        System.out.println("Le nombre d'humains ayant déjà séjourné sur " + mars.nom + " est actuellement " + mars.totalVisiteurs);
+        System.out.println("la forme d'une planète est " + Planet.forme);
+        System.out.println("la forme de " + mars.nom + " est " + mars.forme);
 
     }
 }
