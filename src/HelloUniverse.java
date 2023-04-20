@@ -48,18 +48,16 @@ public class HelloUniverse {
 
         Planet planetX = new Planet();
 
-        mars.accueillirVaisseau(8);
-        mars.accueillirVaisseau("fregate");
-        System.out.println("Le nombre d'humains ayant déjà séjourné sur " + mars.nom + " est actuellement " + mars.totalVisiteurs);
+        Vaisseau fregate = new Vaisseau();
+        fregate.type = "fregate";
+        fregate.nombrePassagers = 9;
+        mars.accueillirVaisseau(fregate);
+        Vaisseau croiseur = new Vaisseau();
+        croiseur.type = "croiseur";
+        croiseur.nombrePassagers = 42;
+        mars.accueillirVaisseau(croiseur);
 
-        System.out.println(uranus.nom + " est composée de :");
-        System.out.println(uranus.atmosphere.tauxHydrogene + "% d'hydrogène");
-        System.out.println(uranus.atmosphere.tauxMethane + "% de méthane");
-        System.out.println(uranus.atmosphere.tauxHelium + "% d'hélium");
-        System.out.println(uranus.atmosphere.tauxAzote + "% d'azote");
-        System.out.println(uranus.atmosphere.tauxArgon + "% d'argon");
-        System.out.println(uranus.atmosphere.tauxDioxydeCarbone + "% de dioxyde de carbone");
-        System.out.println(uranus.atmosphere.tauxSodium + "% de sodium");
+        System.out.println("Le nombre d'humains ayant déjà séjourné sur " + mars.nom + " est actuellement " + mars.totalVisiteurs);
 
     }
 }
