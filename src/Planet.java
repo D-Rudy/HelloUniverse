@@ -15,6 +15,13 @@ public class Planet {
         return angle / 360;
     }
 
+    static String expension(double milliardDeKilometres) {
+        if (milliardDeKilometres < 14) {
+            return "Oh la la mais c'est super rapide!";
+        } else {
+            return "Je rêve ou c'est plus rapide que la lumière?";
+        }
+    }
 
     Vaisseau accueillirVaisseau(Vaisseau vaisseau) {
         totalVisiteurs += vaisseau.nombrePassagers;
