@@ -44,12 +44,9 @@ public class HelloUniverse {
 
         Planet planetX = new Planet();
 
-        int nbTour = mars.rotation(-684);
-        System.out.println(mars.nom + " a effectuée " + nbTour + " tours sur elle-même");
-        nbTour = neptune.revolution(-3542);
-        System.out.println(neptune.nom + " a effectuée " + nbTour + " tours complets autour de son étoile");
-        nbTour = venus.rotation(1250);
-        System.out.println(venus.nom + " a effectuée " + nbTour + " tours sur elle-même");
+        mars.accueillirVaisseau(8);
+        mars.accueillirVaisseau("fregate");
+        System.out.println("Le nombre d'humains ayant déjà séjourné sur " + mars.nom + " est actuellement " + mars.totalVisiteurs);
     }
 }
 
