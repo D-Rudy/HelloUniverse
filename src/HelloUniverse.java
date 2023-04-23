@@ -44,6 +44,27 @@ public class HelloUniverse {
         System.out.println(Planet.expension(10.5));
         System.out.println(Planet.expension(14.2));
         System.out.println("L'Homme à découvert " + Planet.nbPlaneteDecouvertes + " planètes.");
+
+        VaisseauDeGuerre vaisseauDeGuerre = new VaisseauDeGuerre();
+        vaisseauDeGuerre.type = "Chasseur";
+        vaisseauDeGuerre.blindage = 156;
+        vaisseauDeGuerre.resistanceBouclier = 2;
+
+        VaisseauCivil vaisseauCivil = new VaisseauCivil();
+        vaisseauCivil.type = "Vaisseau-Monde";
+        vaisseauCivil.blindage = 4784;
+        vaisseauCivil.resistanceBouclier = 30;
+
+        vaisseauCivil.activerBouclier();
+
+        vaisseauDeGuerre.activerBouclier();
+
+        vaisseauDeGuerre.attaque(vaisseauCivil, "Laser photoniques", 3);
+
+        vaisseauCivil.desactiverBouclier();
+
+        System.out.println("Durée de protection résiduelle du bouclier: " + vaisseauCivil.resistanceBouclier + " secondes.");
+        System.out.println("Blindage restant: " + vaisseauCivil.blindage + " points.");
     }
 }
 
