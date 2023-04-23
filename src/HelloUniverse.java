@@ -2,41 +2,27 @@ public class HelloUniverse {
     public static void main(String... args) {
 
 
-        Planet mercure = new Planet("Mercure");
-        mercure.matiere = "tellurique";
-        mercure.diametre = 4880L;
-
-        Planet venus = new Planet("Venus");
-        venus.matiere = "tellurique";
-        venus.diametre = 12100L;
-
-        Planet terre = new Planet("Terre");
-        terre.matiere = "tellurique";
-        terre.diametre = 12750L;
-
-        Planet mars = new Planet("Mars");
-        mars.matiere = "tellurique";
-        mars.diametre = 6792L;
-
-        Planet jupiter = new Planet("Jupiter");
-        jupiter.matiere = "gazeuse";
-        jupiter.diametre = 142984L;
-
-        Planet saturne = new Planet("Saturne");
-        saturne.matiere = "gazeuse";
-        saturne.diametre = 120536L;
-
-        Planet uranus = new Planet("Uranus");
-        uranus.matiere = "gazeuse";
-        uranus.diametre = 51118L;
-        uranus.atmosphere = new Atmosphere();
-        uranus.atmosphere.tauxHydrogene = 83f;
-        uranus.atmosphere.tauxMethane = 2.5f;
-        uranus.atmosphere.tauxHelium = 15f;
-
-        Planet neptune = new Planet("Neptune");
-        neptune.matiere = "gazeuse";
-        neptune.diametre = 49528L;
+        PlaneteTellurique mercure = new PlaneteTellurique("Mercure");
+        mercure.diametre = 4880;
+        PlaneteTellurique venus = new PlaneteTellurique("Venus");
+        venus.diametre = 12100;
+        PlaneteTellurique terre = new PlaneteTellurique("Terre");
+        terre.diametre = 12750;
+        PlaneteTellurique mars = new PlaneteTellurique("Mars");
+        mars.diametre = 6792;
+        PlaneteGazeuse jupiter = new PlaneteGazeuse("Jupiter");
+        jupiter.diametre = 142984;
+        PlaneteGazeuse saturne = new PlaneteGazeuse("Saturne");
+        saturne.diametre = 120536;
+        PlaneteGazeuse uranus = new PlaneteGazeuse("Uranus");
+        uranus.diametre = 51118;
+        Atmosphere atmosphereUranus = new Atmosphere();
+        atmosphereUranus.tauxHydrogene = 83f;
+        atmosphereUranus.tauxMethane = 2.5f;
+        atmosphereUranus.tauxHelium = 15f;
+        uranus.atmosphere = atmosphereUranus;
+        PlaneteGazeuse neptune = new PlaneteGazeuse("Neptune");
+        neptune.diametre = 49528;
 
         System.out.println("la forme d'une planète est " + Planet.forme);
         System.out.println("la forme de " + mars.nom + " est " + mars.forme);
@@ -45,26 +31,30 @@ public class HelloUniverse {
         System.out.println(Planet.expension(14.2));
         System.out.println("L'Homme à découvert " + Planet.nbPlaneteDecouvertes + " planètes.");
 
-        VaisseauDeGuerre vaisseauDeGuerre = new VaisseauDeGuerre();
-        vaisseauDeGuerre.type = "Chasseur";
-        vaisseauDeGuerre.blindage = 156;
-        vaisseauDeGuerre.resistanceBouclier = 2;
+        VaisseauDeGuerre chasseur = new VaisseauDeGuerre();
+        chasseur.type = "Chasseur";
+        chasseur.blindage = 156;
+        chasseur.resistanceBouclier = 2;
 
-        VaisseauCivil vaisseauCivil = new VaisseauCivil();
-        vaisseauCivil.type = "Vaisseau-Monde";
-        vaisseauCivil.blindage = 4784;
-        vaisseauCivil.resistanceBouclier = 30;
+        VaisseauCivil vaisseauMonde = new VaisseauCivil();
+        vaisseauMonde.type = "Vaisseau-Monde";
+        vaisseauMonde.blindage = 4784;
+        vaisseauMonde.resistanceBouclier = 30;
 
-        vaisseauCivil.activerBouclier();
+        vaisseauMonde.activerBouclier();
 
-        vaisseauDeGuerre.activerBouclier();
+        chasseur.activerBouclier();
 
-        vaisseauDeGuerre.attaque(vaisseauCivil, "Laser photoniques", 3);
+        chasseur.attaque(vaisseauMonde, "Laser photoniques", 3);
 
-        vaisseauCivil.desactiverBouclier();
+        vaisseauMonde.desactiverBouclier();
 
-        System.out.println("Durée de protection résiduelle du bouclier: " + vaisseauCivil.resistanceBouclier + " secondes.");
-        System.out.println("Blindage restant: " + vaisseauCivil.blindage + " points.");
+        System.out.println("Durée de protection résiduelle du bouclier: " + vaisseauMonde.resistanceBouclier + " secondes.");
+        System.out.println("Blindage restant: " + vaisseauMonde.blindage + " points.");
+
+        mars.accueillirVaisseau(vaisseauMonde);
+        mars.accueillirVaisseau(chasseur);
+
     }
 }
 
