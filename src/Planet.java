@@ -6,6 +6,7 @@ public class Planet {
     Atmosphere atmosphere;
     Vaisseau vaisseauActuellementAccoste;
     static String forme = "sphérique";
+    static int nbPlaneteDecouvertes;
 
     int rotation(int angle) {
         return angle / 360;
@@ -22,7 +23,9 @@ public class Planet {
             return "Je rêve ou c'est plus rapide que la lumière?";
         }
     }
-
+    public Planet(){
+        nbPlaneteDecouvertes++;
+    }
     Vaisseau accueillirVaisseau(Vaisseau vaisseau) {
         totalVisiteurs += vaisseau.nombrePassagers;
 

@@ -53,6 +53,7 @@ public class HelloUniverse {
 
         System.out.println(Planet.expension(10.5));
         System.out.println(Planet.expension(14.2));
+        System.out.println("L'Homme à découvert " + Planet.nbPlaneteDecouvertes + " planètes.");
     }
 }
 
