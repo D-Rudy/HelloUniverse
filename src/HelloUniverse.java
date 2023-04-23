@@ -2,38 +2,31 @@ public class HelloUniverse {
     public static void main(String... args) {
 
 
-        Planet mercure = new Planet();
-        mercure.nom = "Mercure";
+        Planet mercure = new Planet("Mercure");
         mercure.matiere = "tellurique";
         mercure.diametre = 4880L;
 
-        Planet venus = new Planet();
-        venus.nom = "Venus";
+        Planet venus = new Planet("Venus");
         venus.matiere = "tellurique";
         venus.diametre = 12100L;
 
-        Planet terre = new Planet();
-        terre.nom = "Terre";
+        Planet terre = new Planet("Terre");
         terre.matiere = "tellurique";
         terre.diametre = 12750L;
 
-        Planet mars = new Planet();
-        mars.nom = "Mars";
+        Planet mars = new Planet("Mars");
         mars.matiere = "tellurique";
         mars.diametre = 6792L;
 
-        Planet jupiter = new Planet();
-        jupiter.nom = "Jupiter";
+        Planet jupiter = new Planet("Jupiter");
         jupiter.matiere = "gazeuse";
         jupiter.diametre = 142984L;
 
-        Planet saturne = new Planet();
-        saturne.nom = "Saturne";
+        Planet saturne = new Planet("Saturne");
         saturne.matiere = "gazeuse";
         saturne.diametre = 120536L;
 
-        Planet uranus = new Planet();
-        uranus.nom = "Uranus";
+        Planet uranus = new Planet("Uranus");
         uranus.matiere = "gazeuse";
         uranus.diametre = 51118L;
         uranus.atmosphere = new Atmosphere();
@@ -41,12 +34,9 @@ public class HelloUniverse {
         uranus.atmosphere.tauxMethane = 2.5f;
         uranus.atmosphere.tauxHelium = 15f;
 
-        Planet neptune = new Planet();
-        neptune.nom = "Neptune";
+        Planet neptune = new Planet("Neptune");
         neptune.matiere = "gazeuse";
         neptune.diametre = 49528L;
-
-        Planet planetX = new Planet();
 
         System.out.println("la forme d'une planète est " + Planet.forme);
         System.out.println("la forme de " + mars.nom + " est " + mars.forme);
