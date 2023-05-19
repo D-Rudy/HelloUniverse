@@ -31,12 +31,12 @@ public class HelloUniverse {
         System.out.println(Planet.expension(14.2));
         System.out.println("L'Homme à découvert " + Planet.nbPlaneteDecouvertes + " planètes.");
 
-        VaisseauDeGuerre chasseur = new VaisseauDeGuerre();
+        Vaisseau chasseur = new VaisseauDeGuerre();
         chasseur.type = "Chasseur";
         chasseur.blindage = 156;
         chasseur.resistanceBouclier = 2;
 
-        VaisseauCivil vaisseauMonde = new VaisseauCivil();
+        Vaisseau vaisseauMonde = new VaisseauCivil();
         vaisseauMonde.type = "Vaisseau-Monde";
         vaisseauMonde.blindage = 4784;
         vaisseauMonde.resistanceBouclier = 30;
@@ -45,7 +45,7 @@ public class HelloUniverse {
 
         chasseur.activerBouclier();
 
-        chasseur.attaque(vaisseauMonde, "Laser photoniques", 3);
+        ((VaisseauDeGuerre) chasseur).attaque(vaisseauMonde, "Laser photoniques", 3);
 
         vaisseauMonde.desactiverBouclier();
 
@@ -54,6 +54,7 @@ public class HelloUniverse {
 
         mars.accueillirVaisseau(vaisseauMonde);
         mars.accueillirVaisseau(chasseur);
+
 
     }
 }
