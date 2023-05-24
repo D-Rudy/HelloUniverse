@@ -1,3 +1,5 @@
+package helloUniverse;
+
 public class HelloUniverse {
     public static void main(String... args) {
 
@@ -25,19 +27,17 @@ public class HelloUniverse {
         neptune.diametre = 49528;
 
         System.out.println("la forme d'une planète est " + Planet.forme);
-        System.out.println("la forme de " + mars.nom + " est " + mars.forme);
+        System.out.println("la forme de " + mars.nom + " est " + Planet.forme);
 
         System.out.println(Planet.expension(10.5));
         System.out.println(Planet.expension(14.2));
         System.out.println("L'Homme à découvert " + Planet.nbPlaneteDecouvertes + " planètes.");
 
-        Vaisseau chasseur = new VaisseauDeGuerre();
-        chasseur.type = "Chasseur";
+        VaisseauDeGuerre chasseur = new VaisseauDeGuerre("CHASSEUR");
         chasseur.blindage = 156;
         chasseur.resistanceBouclier = 2;
 
-        Vaisseau vaisseauMonde = new VaisseauCivil();
-        vaisseauMonde.type = "Vaisseau-Monde";
+        Vaisseau vaisseauMonde = new VaisseauCivil("VAISSEAU-MONDE");
         vaisseauMonde.blindage = 4784;
         vaisseauMonde.resistanceBouclier = 30;
 
@@ -45,7 +45,7 @@ public class HelloUniverse {
 
         chasseur.activerBouclier();
 
-        ((VaisseauDeGuerre) chasseur).attaque(vaisseauMonde, "Laser photoniques", 3);
+        chasseur.attaque(vaisseauMonde, "Laser photoniques", 3);
 
         vaisseauMonde.desactiverBouclier();
 
@@ -55,7 +55,25 @@ public class HelloUniverse {
         mars.accueillirVaisseau(vaisseauMonde);
         mars.accueillirVaisseau(chasseur);
 
+        Vaisseau chasseurSurTerre = new VaisseauDeGuerre("CHASSEUR");
+        terre.accueillirVaisseau(chasseurSurTerre);
+        System.out.println(" le chasseur à rejeté " + chasseurSurTerre.emporterCargaison(20) + " tonnes");
 
+        Vaisseau fregateSurTerre = new VaisseauDeGuerre("FREGATE");
+        fregateSurTerre.nombrePassagers = 100;
+        terre.accueillirVaisseau(fregateSurTerre);
+        System.out.println(" la fregate à rejeté " + fregateSurTerre.emporterCargaison(45) + " tonnes");
+        System.out.println(" la fregate à rejeté " + fregateSurTerre.emporterCargaison(12) + " tonnes");
+
+        Vaisseau fregateSurTerre2 = new VaisseauDeGuerre("FREGATE");
+        fregateSurTerre2.nombrePassagers = 14;
+        terre.accueillirVaisseau(fregateSurTerre2);
+        System.out.println(" la fregate à rejeté " + fregateSurTerre2.emporterCargaison(30) + " tonnes");
+
+        Vaisseau vaisseauMondeSurTerre = new VaisseauCivil("VAISSEAU-MONDE");
+        terre.accueillirVaisseau(vaisseauMondeSurTerre);
+        System.out.println(" le vaisseau monde à rejeté " + vaisseauMondeSurTerre.emporterCargaison(1560) + " tonnes");
+        System.out.println(" le vaisseau monde à rejeté " + vaisseauMondeSurTerre.emporterCargaison(600) + " tonnes");
     }
 }
 

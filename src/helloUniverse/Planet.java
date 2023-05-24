@@ -1,4 +1,6 @@
-public class Planet {
+package helloUniverse;
+
+public abstract class Planet {
     static String forme = "sphérique";
     static int nbPlaneteDecouvertes;
     String nom;
