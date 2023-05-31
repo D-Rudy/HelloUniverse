@@ -1,3 +1,5 @@
+package helloUniverse;
+
 public class Atmosphere {
     float tauxHydrogene;
     float tauxMethane;

@@ -1,3 +1,5 @@
+package helloUniverse;
+
 public class PlaneteTellurique extends Planet implements Habitable {
     int totalVisiteurs = 0;
     Vaisseau vaisseauActuellementAccoste;
